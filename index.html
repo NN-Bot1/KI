@@ -46,7 +46,7 @@ form.addEventListener('submit',async e=>{
   const data=await response.json();
   if(!response.ok)throw new Error(data.error||'Serverfehler');
   waiting.textContent=data.reply;history.push({role:'assistant',content:data.reply});
- }catch(err){waiting.textContent='Verbindung fehlgeschlagen: '+err.message+'\n\nFrage meinen Besitzer (Lukasweiss5b@outlook.de), ob der Server läuft und der API-Schlüssel eingerichtet ist.';}
+ }catch(err){waiting.textContent='Verbindung fehlgeschlagen: '+err.message+'\n\nFrage meinen Besitzer (Lukasweiss5b@outlook.de), ob der Server läuf.';}
  finally{send.disabled=false;statusBox.textContent='';promptBox.focus();}
 });
 promptBox.addEventListener('keydown',e=>{if(e.key==='Enter'&&!e.shiftKey){e.preventDefault();form.requestSubmit();}});
